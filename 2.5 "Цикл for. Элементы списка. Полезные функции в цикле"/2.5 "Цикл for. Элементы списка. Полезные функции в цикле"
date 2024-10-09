@@ -1,0 +1,11 @@
+numbers=(input('Введите три числа через пробел: ')).split()
+#print(len(numbers))
+if (len(numbers)!=3):
+    print('Вы ввели не три числа, повторите попытку')
+a, b, c = map(int, numbers)
+if a == b and a == c and b == c:
+    print('3')
+elif a != b and a != c and b == c or a == b and a != c and b != c or a != b and a == c and b != c:
+    print(2)
+else:
+    print(0)
